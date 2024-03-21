@@ -7,50 +7,71 @@ const collectEmployees = function() {
     let continueAdding = true;
   
     while (continueAdding) {
+      // Prompt for employee's first name
       let firstName = prompt("Enter the employee's first name (or press Cancel to finish):");
+      
+      // If Cancel is pressed, set continueAdding to false and break out of the loop
       if (firstName === null) {
         continueAdding = false;
         break;
       }
   
+      // Validate first name input
       while (firstName.trim() === '') {
         alert('First name cannot be empty. Please enter a valid name.');
         firstName = prompt("Enter the employee's first name:");
       }
   
+      // Prompt for employee's last name
       let lastName = prompt("Enter the employee's last name:");
+      
+      // Validate last name input
       while (lastName.trim() === '') {
         alert('Last name cannot be empty. Please enter a valid name.');
         lastName = prompt("Enter the employee's last name:");
       }
   
+      // Prompt for employee's salary
       let salaryInput = prompt("Enter the employee's salary:");
       let salary = parseInt(salaryInput, 10);
   
+      // Validate salary input
       while (isNaN(salary) || salary <= 0) {
         alert('Salary must be a positive number. Please enter a valid salary.');
         salaryInput = prompt("Enter the employee's salary:");
         salary = parseInt(salaryInput, 10);
       }
   
+      // Add employee object to the employees array
       employees.push({ firstName, lastName, salary });
     }
   
+    // Return the array of employee objects
     return employees;
   };
 
 // Display the average salary
 const displayAverageSalary = function(employeesArray) {
+    // Calculate the total salary using reduce method
     const totalSalary = employeesArray.reduce((sum, employee) => sum + employee.salary, 0);
+    
+    // Calculate the average salary
     const averageSalary = totalSalary / employeesArray.length;
+    
+    // Log the average salary and number of employees to the console
     console.log(`Average salary: ${averageSalary.toLocaleString("en-US", { style: "currency", currency: "USD" })} (${employeesArray.length} employees)`);
   };
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
+    // Generate a random index within the range of the employees array
     const randomIndex = Math.floor(Math.random() * employeesArray.length);
+    
+    // Get the employee object at the random index
     const randomEmployee = employeesArray[randomIndex];
-    console.log(`Conratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} for winning our weekly raffle!`);
+    
+    // Log the full name of the randomly selected employee to the console
+    console.log(`Congratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} for winning our weekly raffle!`);
   };
 
 /*
