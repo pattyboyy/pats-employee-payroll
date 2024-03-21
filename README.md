@@ -1,2 +1,3 @@
 # pats-employee-payroll
-in this project I will be modifying starter code so that the users can view and manage employee payroll data.
+in this project I will be will be adding on to starter code so that the users can view and manage employee payroll data. The code will allow users to input a first name, last name, and salary. once the user inputs the date, the website will display a chart with employee names and salaries in the alphabetical order of last names. When the user looks at the console, they will be able to see the average salary between employees as well as a message which congratulates an employee on winning the random weekly raffle. The website also features responsive design. This employee payroll website can be found at: https://pattyboyy.github.io/pats-employee-payroll/
+![Screenshot 2024-03-21 135004](https://github.com/pattyboyy/pats-employee-payroll/assets/134738449/1c56ece2-2a4f-4f7e-8904-0c85f8d11f9c)
