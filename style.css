@@ -1,5 +1,13 @@
-/* Apply border-box sizing to all elements */
-*, *::before, *::after {
+:root {
+    --color-primary: hsl(223, 74%, 48%);
+    --color-secondary: hsl(206, 17%, 28%);
+    --color-background: #f9fbfd;
+    --color-white: hsl(0, 0%, 100%);
+    --color-gray: #e7e9eb;
+  }
+  
+  /* Apply border-box sizing to all elements */
+  *, *::before, *::after {
     box-sizing: border-box;
   }
   
@@ -13,22 +21,20 @@
   /* Set font family and background color for the body */
   body {
     font-family: sans-serif;
-    background-color: #f9fbfd;
+    background-color: var(--color-background);
   }
   
   /* Add padding to the .wrapper element */
   .wrapper {
-    padding-top: 30px;
-    padding-left: 20px;
-    padding-right: 20px;
+    padding: 30px 20px;
+    margin: 0 auto;
   }
   
   /* Center-align text and add padding to the header */
   header {
     text-align: center;
-    padding: 20px;
-    padding-top: 0px;
-    color: hsl(206, 17%, 28%);
+    padding: 20px 0;
+    color: var(--color-secondary);
   }
   
   /* Center-align h2 elements */
@@ -38,11 +44,11 @@
   
   /* Styling for the card element */
   .card {
-    background-color: hsl(0, 0%, 100%);
+    background-color: var(--color-white);
     border-radius: 5px;
     border-width: 1px;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-    color: hsl(206, 17%, 28%);
+    color: var(--color-secondary);
     font-size: 18px;
     margin: 0 auto;
     max-width: 800px;
@@ -54,7 +60,7 @@
     content: " ";
     display: block;
     width: 100%;
-    background: #e7e9eb;
+    background: var(--color-gray);
     height: 2px;
   }
   
@@ -91,7 +97,7 @@
     content: " ";
     display: block;
     width: 100%;
-    background: #e7e9eb;
+    background: var(--color-gray);
     height: 2px;
   }
   
@@ -105,16 +111,15 @@
   /* Styling for the button */
   .btn {
     border: none;
-    background-color: hsl(223, 74%, 48%);
+    background-color: var(--color-primary);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
-    color: hsl(0, 0%, 100%);
+    color: var(--color-white);
     display: inline-block;
     font-size: 22px;
     line-height: 22px;
     margin: 16px 16px 16px 20px;
     padding: 14px 34px;
     text-align: center;
-    cursor: pointer;
   }
   
   /* Styling for disabled buttons */
@@ -128,43 +133,31 @@
     float: right;
   }
   
-  /* Media query for screens with max-width of 768px */
+  /* Media queries */
   @media (max-width: 768px) {
-    /* Adjust padding for the card */
     .card {
       padding: 20px;
     }
   
-    /* Adjust font size for the table */
     table {
       font-size: 14px;
     }
   
-    /* Adjust font size and padding for the button */
     .btn {
       font-size: 18px;
       padding: 12px 24px;
     }
   }
   
-  /* Media query for screens with max-width of 480px */
   @media (max-width: 480px) {
-    /* Adjust font size for h1 */
-    h1 {
+    h1, h2 {
       font-size: 24px;
     }
   
-    /* Adjust font size for h2 */
-    h2 {
-      font-size: 20px;
-    }
-  
-    /* Adjust font size for the table */
     table {
       font-size: 12px;
     }
   
-    /* Adjust font size and padding for the button */
     .btn {
       font-size: 16px;
       padding: 10px 20px;
