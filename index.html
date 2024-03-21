@@ -1,42 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-
+    
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Employee Payroll Tracker</title>
-  <link rel="stylesheet" href="style.css" />
-  <link rel="icon" type="image/x-icon" href="assets\favicon.ico">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" type="image/x-icon" href="assets/favicon.ico">
 </head>
 
 <body>
-    <div class="wrapper">
-      <header>
-        <h1>Employee Payroll Tracker</h1>
-      </header>
-      <main>
-        <div class="card">
-          <div class="card-header">
-            <h2>Employee Roster</h2>
-          </div>
-          <div class="card-body">
-            <table>
-              <thead>
-                <tr>
-                  <th scope="col">First Name</th>
-                  <th scope="col">Last Name</th>
-                  <th scope="col">Salary</th>
-                </tr>
-              </thead>
-              <tbody id="employee-table"></tbody>
-            </table>
-          </div>
-          <div class="card-footer">
-            <button id="add-employees-btn" class="btn">Add Employees</button>
-          </div>
+  <div class="wrapper">
+    <header>
+      <h1>Employee Payroll Tracker</h1>
+    </header>
+    <main>
+      <section class="card">
+        <div class="card-header">
+          <h2>Employee Roster</h2>
         </div>
-      </main>
-    </div>
-    <script src="script.js"></script>
-  </body>
+        <div class="card-body">
+          <table>
+            <thead>
+              <tr>
+                <th scope="col">First Name</th>
+                <th scope="col">Last Name</th>
+                <th scope="col">Salary</th>
+              </tr>
+            </thead>
+            <tbody id="employee-table"></tbody>
+          </table>
+        </div>
+        <div class="card-footer">
+          <button id="add-employees-btn" class="btn">Add Employees</button>
+        </div>
+      </section>
+    </main>
+  </div>
+  <script src="script.js"></script>
+</body>
+</html>
