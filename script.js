@@ -4,30 +4,33 @@ const addEmployeesBtn = document.querySelector('#add-employees-btn');
 // Collect employee data
 const collectEmployees = function() {
     const employees = [];
+    let continueAdding = true;
   
-    while (true) {
-      const firstName = prompt("Enter the employee's first name (or press Cancel to finish):");
+    while (continueAdding) {
+      let firstName = prompt("Enter the employee's first name (or press Cancel to finish):");
       if (firstName === null) {
+        continueAdding = false;
         break;
       }
   
-      if (firstName.trim() === '') {
+      while (firstName.trim() === '') {
         alert('First name cannot be empty. Please enter a valid name.');
-        continue;
+        firstName = prompt("Enter the employee's first name:");
       }
   
-      const lastName = prompt("Enter the employee's last name:");
-      if (lastName.trim() === '') {
+      let lastName = prompt("Enter the employee's last name:");
+      while (lastName.trim() === '') {
         alert('Last name cannot be empty. Please enter a valid name.');
-        continue;
+        lastName = prompt("Enter the employee's last name:");
       }
   
-      const salaryInput = prompt("Enter the employee's salary:");
-      const salary = parseInt(salaryInput, 10);
+      let salaryInput = prompt("Enter the employee's salary:");
+      let salary = parseInt(salaryInput, 10);
   
-      if (isNaN(salary) || salary <= 0) {
+      while (isNaN(salary) || salary <= 0) {
         alert('Salary must be a positive number. Please enter a valid salary.');
-        continue;
+        salaryInput = prompt("Enter the employee's salary:");
+        salary = parseInt(salaryInput, 10);
       }
   
       employees.push({ firstName, lastName, salary });
