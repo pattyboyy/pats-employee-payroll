@@ -11,9 +11,24 @@ const collectEmployees = function() {
         break;
       }
   
+      if (firstName.trim() === '') {
+        alert('First name cannot be empty. Please enter a valid name.');
+        continue;
+      }
+  
       const lastName = prompt("Enter the employee's last name:");
+      if (lastName.trim() === '') {
+        alert('Last name cannot be empty. Please enter a valid name.');
+        continue;
+      }
+  
       const salaryInput = prompt("Enter the employee's salary:");
-      const salary = isNaN(salaryInput) ? 0 : Number(salaryInput);
+      const salary = parseInt(salaryInput, 10);
+  
+      if (isNaN(salary) || salary <= 0) {
+        alert('Salary must be a positive number. Please enter a valid salary.');
+        continue;
+      }
   
       employees.push({ firstName, lastName, salary });
     }
@@ -30,8 +45,10 @@ const displayAverageSalary = function(employeesArray) {
 
 // Select a random employee
 const getRandomEmployee = function(employeesArray) {
-  // TODO: Select and display a random employee
-}
+    const randomIndex = Math.floor(Math.random() * employeesArray.length);
+    const randomEmployee = employeesArray[randomIndex];
+    console.log(`Conratulations to ${randomEmployee.firstName} ${randomEmployee.lastName} for winning our weekly raffle!`);
+  };
 
 /*
   ====================
