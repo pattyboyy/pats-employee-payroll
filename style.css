@@ -1,149 +1,170 @@
-*,
-*::before,
-*::after {
-  box-sizing: border-box;
-}
-
-html,
-body,
-.wrapper {
-  height: 100%;
-  margin: 0;
-  padding: 0;
-}
-
-body {
-  font-family: sans-serif;
-  background-color: #f9fbfd;
-}
-
-.wrapper {
-  padding-top: 30px;
-  padding-left: 20px;
-  padding-right: 20px;
-}
-
-header {
-  text-align: center;
-  padding: 20px;
-  padding-top: 0px;
-  color: hsl(206, 17%, 28%);
-}
-
-h2 {
-  text-align: center;
-}
-
-.card {
-  background-color: hsl(0, 0%, 100%);
-  border-radius: 5px;
-  border-width: 1px;
-  box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
-  color: hsl(206, 17%, 28%);
-  font-size: 18px;
-  margin: 0 auto;
-  max-width: 800px;
-  padding: 30px 40px;
-}
-
-.card-header::after {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-body {
-  min-height: 100px;
-}
-
-table {
-  width:100%;
-  border-spacing: 0;
-  border-collapse: collapse;
-}
-
-td{
-  text-align: center;
-  border:4px solid black;
-}
-
-tbody tr:nth-child(even) {
-  background-color: hsl(223, 64%, 90%);
-}
-
-.card-footer {
-  text-align: center;
-}
-
-.card-footer::before {
-  content: " ";
-  display: block;
-  width: 100%;
-  background: #e7e9eb;
-  height: 2px;
-}
-
-.card-footer::after {
-  content: " ";
-  display: block;
-  clear: both;
-}
-
-.btn {
-  border: none;
-  background-color: hsl(223, 74%, 48%);
-  box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px
-    0px;
-  color: hsl(0, 0%, 100%);
-  display: inline-block;
-  font-size: 22px;
-  line-height: 22px;
-  margin: 16px 16px 16px 20px;
-  padding: 14px 34px;
-  text-align: center;
-  cursor: pointer;
-}
-
-button[disabled] {
-  cursor: default;
-  background: #c0c7cf;
-}
-
-.float-right {
-  float: right;
-}
-
-
-@media (max-width: 768px) {
+/* Apply border-box sizing to all elements */
+*, *::before, *::after {
+    box-sizing: border-box;
+  }
+  
+  /* Set height to 100% and remove margin and padding for html, body, and .wrapper */
+  html, body, .wrapper {
+    height: 100%;
+    margin: 0;
+    padding: 0;
+  }
+  
+  /* Set font family and background color for the body */
+  body {
+    font-family: sans-serif;
+    background-color: #f9fbfd;
+  }
+  
+  /* Add padding to the .wrapper element */
+  .wrapper {
+    padding-top: 30px;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  
+  /* Center-align text and add padding to the header */
+  header {
+    text-align: center;
+    padding: 20px;
+    padding-top: 0px;
+    color: hsl(206, 17%, 28%);
+  }
+  
+  /* Center-align h2 elements */
+  h2 {
+    text-align: center;
+  }
+  
+  /* Styling for the card element */
+  .card {
+    background-color: hsl(0, 0%, 100%);
+    border-radius: 5px;
+    border-width: 1px;
+    box-shadow: rgba(0, 0, 0, 0.15) 0px 2px 8px 0px;
+    color: hsl(206, 17%, 28%);
+    font-size: 18px;
+    margin: 0 auto;
+    max-width: 800px;
+    padding: 30px 40px;
+  }
+  
+  /* Add a horizontal line after the card header */
+  .card-header::after {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+  }
+  
+  /* Set minimum height for the card body */
+  .card-body {
+    min-height: 100px;
+  }
+  
+  /* Set table width to 100% and remove border spacing and collapse borders */
+  table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+  }
+  
+  /* Center-align text and add border to table cells */
+  td {
+    text-align: center;
+    border: 4px solid black;
+  }
+  
+  /* Set background color for even rows in the table body */
+  tbody tr:nth-child(even) {
+    background-color: hsl(223, 64%, 90%);
+  }
+  
+  /* Center-align text in the card footer */
+  .card-footer {
+    text-align: center;
+  }
+  
+  /* Add a horizontal line before the card footer */
+  .card-footer::before {
+    content: " ";
+    display: block;
+    width: 100%;
+    background: #e7e9eb;
+    height: 2px;
+  }
+  
+  /* Clear the float after the card footer */
+  .card-footer::after {
+    content: " ";
+    display: block;
+    clear: both;
+  }
+  
+  /* Styling for the button */
+  .btn {
+    border: none;
+    background-color: hsl(223, 74%, 48%);
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 1px 6px 0px rgba(0, 0, 0, 0.2) 0px 1px 1px 0px;
+    color: hsl(0, 0%, 100%);
+    display: inline-block;
+    font-size: 22px;
+    line-height: 22px;
+    margin: 16px 16px 16px 20px;
+    padding: 14px 34px;
+    text-align: center;
+    cursor: pointer;
+  }
+  
+  /* Styling for disabled buttons */
+  button[disabled] {
+    cursor: default;
+    background: #c0c7cf;
+  }
+  
+  /* Float elements to the right */
+  .float-right {
+    float: right;
+  }
+  
+  /* Media query for screens with max-width of 768px */
+  @media (max-width: 768px) {
+    /* Adjust padding for the card */
     .card {
       padding: 20px;
     }
   
+    /* Adjust font size for the table */
     table {
       font-size: 14px;
     }
   
+    /* Adjust font size and padding for the button */
     .btn {
       font-size: 18px;
       padding: 12px 24px;
     }
   }
   
+  /* Media query for screens with max-width of 480px */
   @media (max-width: 480px) {
+    /* Adjust font size for h1 */
     h1 {
       font-size: 24px;
     }
   
+    /* Adjust font size for h2 */
     h2 {
       font-size: 20px;
     }
   
+    /* Adjust font size for the table */
     table {
       font-size: 12px;
     }
   
+    /* Adjust font size and padding for the button */
     .btn {
       font-size: 16px;
       padding: 10px 20px;
